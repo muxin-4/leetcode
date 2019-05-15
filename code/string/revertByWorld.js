@@ -1,18 +1,48 @@
 // export default (str) => {
-//   // 字符串按空格进行分割，保存数组，数组的元素的先后顺序就是单词的顺序
+//   // The string is separated by Spaces and the array is saved
+//   // The order of the elements in the array is the order of the words
 //   let arr = str.split(' ')
-//   // 对数组进行遍历，然后每个元素进行反转
+//   // Iterate through the array, then invert each element
 //   let result = arr.map(item => {
 //     return item.split('').reverse().join('')
 //   })
 //   return result.join(' ')
 // }
 
-export default (str) => {
-  // 1. 字符串按空格进行分割，保存数组，数组的元素的先后顺序就是单词的顺序
-  // 2. 对数组进行遍历，然后每个元素进行反转
+// export default (str) => {
+//   // The string is separated by Spaces and the array is saved
+//   // The order of the elements in the array is the order of the words
+//   // Iterate through the array, then invert each element
 
-  return str.split(' ').map(item => {
-    return item.split('').reverse().join('')
-  }).join(' ')
+//   return str.split(' ').map(item => {
+//     return item.split('').reverse().join('')
+//   }).join(' ')
+// }
+
+// export default (str) => {
+//   // The string is separated by Spaces and the array is saved
+//   // The order of the elements in the array is the order of the words
+//   // Iterate through the array, then invert each element
+
+//   return str.split(/\s/g).map(item => {
+//     return item.split('').reverse().join('')
+//   }).join(' ')
+// }
+
+// export default (str) => {
+//   // The string is separated by Spaces and the array is saved
+//   // The order of the elements in the array is the order of the words
+//   // Iterate through the array, then invert each element
+
+//   return str.match(/[\w']+/g).map(item => {
+//     return item.split('').reverse().join('')
+//   }).join(' ')
+// }
+
+export default (str) => {
+  // reverse string word by word
+  return str.split(' ').reduce((reversed, curr) => {
+    reversed.push(curr.split('').reverse().join(''))
+    return reversed
+  }, []).join(' ')
 }
