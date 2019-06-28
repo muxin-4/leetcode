@@ -3,3 +3,4 @@ dist/
 .vscode/
 *-lock.json
 *.zip
+my_doc/*

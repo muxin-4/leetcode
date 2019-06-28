@@ -39,10 +39,14 @@
 //   }).join(' ')
 // }
 
+// export default (str) => {
+//   // reverse string word by word
+//   return str.split(' ').reduce((reversed, curr) => {
+//     reversed.push(curr.split('').reverse().join(''))
+//     return reversed
+//   }, []).join(' ')
+// }
+
 export default (str) => {
-  // reverse string word by word
-  return str.split(' ').reduce((reversed, curr) => {
-    reversed.push(curr.split('').reverse().join(''))
-    return reversed
-  }, []).join(' ')
+  return str.split('').reverse().join('').split(' ').reverse().join(' ')
 }

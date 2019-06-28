@@ -4,7 +4,8 @@
 	"description": "leetcode",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest ./test"
+		"test": "jest ./test",
+		"compile": "babel code --out-dir .compiled --source-maps --watch"
 	},
 	"keywords": [
 		"leetcode"
