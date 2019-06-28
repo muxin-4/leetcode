@@ -1,4 +1,4 @@
-// export default (str) => {
+// const reverseWords = (str) => {
 //   // The string is separated by Spaces and the array is saved
 //   // The order of the elements in the array is the order of the words
 //   let arr = str.split(' ')
@@ -9,7 +9,7 @@
 //   return result.join(' ')
 // }
 
-// export default (str) => {
+// const reverseWords = (str) => {
 //   // The string is separated by Spaces and the array is saved
 //   // The order of the elements in the array is the order of the words
 //   // Iterate through the array, then invert each element
@@ -19,7 +19,7 @@
 //   }).join(' ')
 // }
 
-// export default (str) => {
+// const reverseWords = (str) => {
 //   // The string is separated by Spaces and the array is saved
 //   // The order of the elements in the array is the order of the words
 //   // Iterate through the array, then invert each element
@@ -29,7 +29,7 @@
 //   }).join(' ')
 // }
 
-// export default (str) => {
+// const reverseWords = (str) => {
 //   // The string is separated by Spaces and the array is saved
 //   // The order of the elements in the array is the order of the words
 //   // Iterate through the array, then invert each element
@@ -39,7 +39,7 @@
 //   }).join(' ')
 // }
 
-// export default (str) => {
+// const reverseWords = (str) => {
 //   // reverse string word by word
 //   return str.split(' ').reduce((reversed, curr) => {
 //     reversed.push(curr.split('').reverse().join(''))
@@ -47,6 +47,8 @@
 //   }, []).join(' ')
 // }
 
-export default (str) => {
+const reverseWords = (str) => {
   return str.split('').reverse().join('').split(' ').reverse().join(' ')
 }
+
+export default reverseWords

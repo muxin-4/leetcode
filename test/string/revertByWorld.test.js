@@ -1,5 +1,5 @@
-import revertByWorld from '../../code/string/revertByWorld.js'
+import reverseWords from '../../code/string/557. Reverse Words in a String III.js'
 
 test('revertByWorld:Let\'s take LeetCode contest', () => {
-  expect(revertByWorld("Let's take LeetCode contest")).toBe("s'teL ekat edoCteeL tsetnoc")
+  expect(reverseWords("Let's take LeetCode contest")).toBe("s'teL ekat edoCteeL tsetnoc")
 })
