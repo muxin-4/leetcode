@@ -13,13 +13,12 @@
 	"author": "wgy952046097@gmail.com",
 	"license": "Apache-2.0",
 	"dependencies": {
-		"@babel/preset-env": "7.1.6",
-		"eslint-plugin-jest": "22.0.0",
 		"regenerator-runtime": "0.12.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.5.0",
 		"@babel/register": "^7.4.4",
+		"@babel/preset-env": "7.1.6",
 		"babel-core": "^7.0.0-bridge.0",
 		"babel-jest": "^24.8.0",
 		"eslint": "5.9.0",
@@ -28,6 +27,7 @@
 		"eslint-plugin-node": "8.0.0",
 		"eslint-plugin-promise": "4.0.1",
 		"eslint-plugin-standard": "4.0.0",
+		"eslint-plugin-jest": "22.0.0",
 		"jest": "^24.8.0"
 	},
 	"directories": {
