@@ -1,4 +1,4 @@
-import maximumGap from '../../src/array/164. Maximum Gap'
+import maximumGap from '../../src/code/array/164. Maximum Gap'
 
 test('sort:input2', () => {
 	expect(maximumGap([3, 6, 9, 1])).toBe(3)

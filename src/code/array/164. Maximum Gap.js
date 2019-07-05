@@ -1,4 +1,4 @@
-import swap from '../sort/swap'
+import swap from '../../index.js'
 
 function maximumGap(arr) {
 	if (arr === null || arr.length < 2) return 0
