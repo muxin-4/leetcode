@@ -1,5 +1,9 @@
 import swap from './swap'
 
+/**
+ * @param {Array} arr 
+ * @return {Array}
+ */
 function selectionSort(arr) {
 	let len = arr.length
 	let minIndex
@@ -14,7 +18,6 @@ function selectionSort(arr) {
 			swap(i, minIndex, arr)
 		}
 	}
-	console.log('arr', arr);
 	return arr
 }
 
