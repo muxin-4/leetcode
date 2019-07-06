@@ -1,4 +1,4 @@
-import swap from '../../utils.js'
+import { swap } from '../../utils.js'
 
 /**
  * @param {Array} arr 
