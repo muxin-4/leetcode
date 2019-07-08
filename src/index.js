@@ -8,6 +8,8 @@ import firstMissingPositive from './code/sort/41. First Missing Positive'
 
 import restoreIpAddresses from './code/recur/93. Restore IP Addresses'
 
+import uniquePathsWithObstacles from './code/dp/63. Unique Paths II'
+
 letterCombinations('234')
 maximumGap([13, 16, 19, 1]);
 
@@ -17,3 +19,12 @@ findKthLargest([2, 1], 2)
 firstMissingPositive([3, 4, -1, 1])
 
 restoreIpAddresses('010010')
+
+// let uniquePathsWithObstaclesArr = [
+// 	[0, 0, 0],
+// 	[0, 1, 0],
+// 	[0, 0, 0]
+// ]
+let uniquePathsWithObstaclesArr =
+	[[1], [0]]
+uniquePathsWithObstacles(uniquePathsWithObstaclesArr)
