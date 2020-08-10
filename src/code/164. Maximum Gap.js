@@ -1,4 +1,4 @@
-import { swap } from '../../utils'
+import { swap } from '../utils'
 
 /**
  * 简单写法：先排序，再比较得出相邻元素最大差值

@@ -1,4 +1,4 @@
-import ip from '../../src/code/recur/93. Restore IP Addresses'
+import ip from '../src/code/93. Restore IP Addresses'
 
 test('ip:1', () => {
 	expect(ip('25525511135')).toEqual(['255.255.11.135', '255.255.111.35'])

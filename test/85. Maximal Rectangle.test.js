@@ -1,4 +1,4 @@
-import maximalRectangle from '../../src/code/stack/85. Maximal Rectangle'
+import maximalRectangle from '../src/code/85. Maximal Rectangle'
 
 test('maximalRectangle:1', () => {
 	let input = [

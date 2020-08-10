@@ -1,4 +1,4 @@
-import uniquePathsWithObstacles from '../../src/code/dp/63. Unique Paths II'
+import uniquePathsWithObstacles from '../src/code/63. Unique Paths II'
 
 test('uniquePathsWithObstacles:1', () => {
 	let arr = [

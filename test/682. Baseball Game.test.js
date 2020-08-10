@@ -1,4 +1,4 @@
-import calPoints from '../../src/code/stack/682. Baseball Game'
+import calPoints from '../src/code/682. Baseball Game'
 
 
 test('calPoints:input1', () => {

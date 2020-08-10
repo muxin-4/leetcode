@@ -1,4 +1,4 @@
-import MyCircularQueue from '../../src/code/queue/622. Design Circular Queue'
+import MyCircularQueue from '../src/code/622. Design Circular Queue'
 
 test('MyCircularQueue:1', () => {
 	let queue = new MyCircularQueue(4)

@@ -1,4 +1,4 @@
-import firstMissingPositive from '../../src/code/sort/41. First Missing Positive'
+import firstMissingPositive from '../src/code/41. First Missing Positive'
 
 test('input:1', () => {
 	expect(firstMissingPositive([1, 2, 0])).toBe(3)
