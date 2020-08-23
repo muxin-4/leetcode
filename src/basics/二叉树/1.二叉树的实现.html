@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function BinarySearchTree(vals) {
+            //Node构造函数
+            let Node = function (val) {
+                this.val = val
+                this.left = null
+                this.right = null
+            }
+            let root = null
+
+            //2.1递归实现：
+            function buildBt1(node, i) {
+                var leftIndex = 2 * i + 1, //左孩子节点的索引
+                    rightIndex = 2 * i + 2; //右孩子节点的索引
+                if (leftIndex < vals.length) { //判断索引的长度是否超过了charecters数组的大小
+                    var childNode = new Node(); //创建一个新的节点对象
+                    childNode.val = vals[leftIndex]; //给节点赋值
+                    node.left = childNode; //给当前节点node加入左孩子节点
+                    buildBt1(childNode, leftIndex); //递归创建左孩子
+                }
+                if (rightIndex < vals.length) { //同上
+                    var childNode = new Node();
+                    childNode.val = vals[rightIndex];
+                    node.right = childNode;
+                    buildBt1(childNode, rightIndex);
+                }
+            }
+
+            let insertNode = (node, i) => {
+
+                while (i < vals.length) {
+                    var leftIndex = 2 * i + 1, //当前节点左孩子索引
+                        rightIndex = 2 * i + 2; //当前节点右孩子索引
+                    //给当前节点添加左孩子
+                    node.left = vals[leftIndex];
+                    //给当前节点添加右孩子
+                    node.right = vals[rightIndex];
+                    i++;
+                }
+                // if (newNode.val < node.val) {
+                //     if (node.left === null) {
+                //         node.left = newNode
+                //     } else {
+                //         insertNode(node.left, newNode)
+                //     }
+                // } else {
+                //     if (node.right === null) {
+                //         node.right = newNode
+                //     } else {
+                //         insertNode(node.right, newNode)
+                //     }
+                // }
+            }
+            this.insert = (val, i) => {
+                let newNode = new Node(val)
+                if (root === null) {
+                    root = newNode
+                } else {
+                    insertNode(root, i)
+                }
+            }
+            vals.forEach((val, i) => {
+                this.insert(val, i)
+            })
+            return root
+        }
+
+        const keys = [3, 9, 20, null, null, 15, 7];
+        console.log('result', BinarySearchTree(keys));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../utils.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        /*
+         * @lc app=leetcode.cn id=104 lang=javascript
+         *
+         * [104] 二叉树的最大深度
+         */
+
+        // @lc code=start
+        /**
+         * Definition for a binary tree node.
+         * function TreeNode(val) {
+         *     this.val = val;
+         *     this.left = this.right = null;
+         * }
+         */
+        /**
+         * @param {TreeNode} root
+         * @return {number}
+         */
+
+        var maxDepth = function (root) {
+            if (!root) return 0;
+            else {
+                let leftDepth = maxDepth(root.left),
+                    rightDepth = maxDepth(root.right);
+                let childDepth = leftDepth > rightDepth ? leftDepth : rightDepth;
+                return childDepth + 1;
+            }
+        };
+        // @lc code=end
+        let _BinaryTree = new BinaryTree([3, 9, 20, null, null, 15, 7])
+
+        console.log('BinaryTree',
+            _BinaryTree
+        );
+        let result = maxDepth(
+            _BinaryTree
+        );
+        console.log('result',
+            result
+        );
+
+        // @after-stub-for-debug-begin
+        // module.exports = maxDepth;
+        // @after-stub-for-debug-end
+    </script>
+
+
+</body>
+
+</html>
