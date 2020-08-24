@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../utils.js"></script>
-
 </head>
 
 <body>
-
     <script>
         /*
-         * @lc app=leetcode.cn id=104 lang=javascript
+         * @lc app=leetcode.cn id=110 lang=javascript
          *
-         * [104] 二叉树的最大深度
+         * [110] 平衡二叉树
          */
 
         // @lc code=start
@@ -28,37 +26,40 @@
          */
         /**
          * @param {TreeNode} root
-         * @return {number}
+         * @return {boolean}
          */
-
-        var maxDepth = function (root) {
-            if (!root) return 0;
-
-            let leftDepth = maxDepth(root.left),
-                rightDepth = maxDepth(root.right);
-            // let childDepth = leftDepth > rightDepth ? leftDepth : rightDepth;
-            // return childDepth + 1;
-
-            return Math.max(leftDepth, rightDepth) + 1
+        let isAns
+        var isBalanced = function (root) {
+            isAns = true
+            maxDepth(root)
+            return isAns
         };
-        // @lc code=end
+
+        function maxDepth(root) {
+            if (!root) return 0
+            let leftDepth = maxDepth(root.left);
+            let rightDepth = maxDepth(root.right);
+
+            console.log('left', leftDepth);
+            console.log('right', rightDepth);
+
+            if (Math.abs(leftDepth - rightDepth) > 1) isAns = false
+            return Math.max(leftDepth, rightDepth) + 1
+        }
+
         let _BinaryTree = new BinaryTree([3, 9, 20, null, null, 15, 7]);
 
         console.log('BinaryTree',
             _BinaryTree
         );
-        let result = maxDepth(
+        let result = isBalanced(
             _BinaryTree
         );
         console.log('result',
             result
         );
-
-        // @after-stub-for-debug-begin
-        // module.exports = maxDepth;
-        // @after-stub-for-debug-end
+        // @lc code=end
     </script>
-
 
 </body>
 
