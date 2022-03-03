@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../utils.js"></script>
+  </head>
+
+  <body>
+    <script>
+      /**
+       * 方法一：循环+递归
+       * @param {number} num
+       * @return {number}
+       */
+      var addDigits = function (num) {
+        let curNum = String(num);
+
+        function getSum(num) {
+          curNum = 0;
+          for (let i in num) {
+            curNum += Number(num[i]);
+          }
+          return checkSum(curNum);
+        }
+
+        function checkSum(curNum) {
+          if (Number(curNum) < 10) {
+            return Number(curNum);
+          } else {
+            return getSum(String(curNum));
+          }
+        }
+
+        return checkSum(curNum);
+      };
+
+      console.log("result", addDigits(38));
+    </script>
+  </body>
+</html>
