@@ -36,7 +36,14 @@
         return checkSum(curNum);
       };
 
-      console.log("result", addDigits(38));
+      /**
+       * 方法二：不适用循环+递归，在 O(1) 时间复杂度内解决这个问题
+       * @param {number} num
+       * @return {number}
+       */
+      var addDigits = function (num) {
+        return ((num - 1) % 9) + 1;
+      };
     </script>
   </body>
 </html>
